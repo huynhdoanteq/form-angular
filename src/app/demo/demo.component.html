@@ -1,1 +1,23 @@
-<p>demo works!</p>
+<div *ngIf="currentCustomer">
+  <p>{{currentCustomer.name}}</p>
+  <ul>
+    <li *ngFor="let item of items; let i=index">
+      {{ i + 1 }} - {{item}}
+    </li>
+  </ul>
+  <div [ngClass]="isSpecial ? 'special' : ''">this div is special</div>
+  <div [ngStyle]="currentStyles">this text demo style</div>
+
+  <input #lastname placeholder="add last name" required/>
+  <input #firstname placeholder="add first name" required/>
+  <button type="button" (click)="addText(lastname.value, firstname.value)">Log</button>
+
+  <div *ngFor="let data of dataForm">
+    first name is: {{data.first}}
+    last name is: {{data.last}}
+  </div>
+
+</div>
+
+
+
