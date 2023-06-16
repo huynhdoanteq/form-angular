@@ -24,7 +24,7 @@ export class DemoComponent {
   constructor() {
     this.user = {} as IUser;
   }
-
+ 
   ngOnInit() {
     this.onColorChange();
     // this.reactiveForm = new FormGroup({
